@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AeroLift Academy</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#1a1a1a;
+    color:white;
+    font-family:Arial,sans-serif;
+}
+
+/* Left Accent Strip */
+
+.accent-strip{
+    position:fixed;
+    left:0;
+    top:0;
+    width:8px;
+    height:100vh;
+    background:linear-gradient(
+        to bottom,
+        #f97316,
+        #3b82f6
+    );
+}
+
+/* Navigation */
+
+nav{
+    margin-left:8px;
+    background:#242424;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:25px 40px;
+
+    border-bottom:1px solid #333;
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#f97316;
+}
+
+/* Hero */
+
+.hero{
+    margin-left:8px;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:800px;
+    margin:auto;
+    color:#d0d0d0;
+    line-height:1.8;
+}
+
+/* Content */
+
+.container{
+    margin-left:8px;
+    padding:40px;
+}
+
+.card{
+    background:#242424;
+    padding:25px;
+    margin-bottom:20px;
+
+    border-left:5px solid #f97316;
+    border-radius:12px;
+}
+
+.card h2{
+    color:#3b82f6;
+    margin-bottom:10px;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:white;
+    font-size:18px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="accent-strip"></div>
+
+<nav>
+
+    <div class="logo">
+        ✈ AEROLIFT ACADEMY
+    </div>
+
+    <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="lift.html">Lift</a>
+    <a href="drag.html">Drag</a>
+    <a href="thrust.html">Thrust</a>
+    <a href="lab.html">Lab</a>
+    </div>
+
+</nav>
+
+<section class="hero">
+
+    <h1>What is drag?</h1>
+
+    <p>
+     Drag is the force that opposes motion. This can cause 
+     the airplane to decelerate. Drag changes according to speed 
+     and shape of moving object.
+    </p>
+
+</section>
+
+<div class="container">
+
+    <div class="card">
+
+        <h2>How can drag be reduced?</h2>
+
+        <p>
+         We would have to make the shape of the object in motion more 
+         aerodynamic. This would help air flow more smoothly past the 
+         accelerating object by reducing places where air could catch 
+         onto the plane.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>What happens if there is no drag?</h2>
+
+        <p>
+         You might think that if drag didn't exist, objects can move 
+         faster and there would be less force required to accelerate. 
+         But drag is important, as without it objects will keep moving 
+         unless opposite force is applied. Parachutes will also be 
+         useless if drag was non-existant.
+        </p>
+
+    </div>
+
+
+</div>
+
+<footer>
+    ✈ AeroLift Academy | Created by HarshoCodezz
+</footer>
+
+</body>
+</html>
