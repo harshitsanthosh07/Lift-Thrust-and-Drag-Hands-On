@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AeroLift Academy</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#1a1a1a;
+    color:white;
+    font-family:Arial,sans-serif;
+}
+
+/* Left Accent Strip */
+
+.accent-strip{
+    position:fixed;
+    left:0;
+    top:0;
+    width:8px;
+    height:100vh;
+    background:linear-gradient(
+        to bottom,
+        #f97316,
+        #3b82f6
+    );
+}
+
+/* Navigation */
+
+nav{
+    margin-left:8px;
+    background:#242424;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:25px 40px;
+
+    border-bottom:1px solid #333;
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#f97316;
+}
+
+/* Hero */
+
+.hero{
+    margin-left:8px;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:800px;
+    margin:auto;
+    color:#d0d0d0;
+    line-height:1.8;
+}
+
+/* Content */
+
+.container{
+    margin-left:8px;
+    padding:40px;
+}
+
+.card{
+    background:#242424;
+    padding:25px;
+    margin-bottom:20px;
+
+    border-left:5px solid #f97316;
+    border-radius:12px;
+}
+
+.card h2{
+    color:#3b82f6;
+    margin-bottom:10px;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:white;
+    font-size:18px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="accent-strip"></div>
+
+<nav>
+
+    <div class="logo">
+        ✈ AEROLIFT ACADEMY
+    </div>
+
+    <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="lift.html">Lift</a>
+    <a href="drag.html">Drag</a>
+    <a href="thrust.html">Thrust</a>
+    <a href="lab.html">Lab</a>
+    </div>
+
+</nav>
+
+<section class="hero">
+
+    <h1>AeroLift Lab</h1>
+
+    <p>
+        Keep the plane aloft for as long as possible 
+        using the recently learnt knowledge about 
+        lift, thrust and drag.
+    </p>
+
+</section>
+
+<div class="container">
+
+    <div class="card">
+
+        <h2>Flight Simulator</h2>
+
+     <p>Lift: <span id="lift">20</span></p>
+     <p>Weight: 50</p>
+
+     <br>
+
+     <p>Thrust: <span id="thrust">20</span></p>
+     <p>Drag: <span id="drag">40</span></p>
+ 
+     <br>
+ 
+     <button onclick="increaseLift()">+ Lift</button>
+ 
+     <button onclick="increaseThrust()">+ Thrust</button>
+
+     <button onclick="reduceDrag()">- Drag</button>
+
+     <br><br>
+
+     <h3 id="status">❌ Grounded</h3>
+
+    </div>
+
+</div>
+
+<footer>
+    ✈ AeroLift Academy | Created by HarshoCodezz
+</footer>
+
+<script>
+
+let lift = 20;
+let thrust = 20;
+let drag = 40;
+
+function increaseLift() {
+
+    lift++;
+
+    document.getElementById("lift").textContent = lift;
+
+    checkFlight();
+}
+
+function increaseThrust() {
+
+    thrust++;
+
+    document.getElementById("thrust").textContent = thrust;
+
+    checkFlight();
+}
+
+function reduceDrag() {
+
+    if (drag > 0) {
+        drag--;
+    }
+
+    document.getElementById("drag").textContent = drag;
+
+    checkFlight();
+}
+
+function checkFlight() {
+
+    if (lift > 50 && thrust > drag) {
+
+        document.getElementById("status").textContent =
+        "✅ AIRBORNE";
+    }
+}
+
+</script>
+</body>
+</html>
